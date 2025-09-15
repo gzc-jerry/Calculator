@@ -1,6 +1,6 @@
 # Calculator
 
-A minimalist calculator inspired by modern Japanese architecture (Aman Tokyo aesthetic).
+A simple calculator
 
 ## Run
 
