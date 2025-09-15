@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="shell">
+      <header class="header">
+        <h1 class="brand" aria-label="Calculator title"></h1>
+        <button class="history-toggle" id="historyToggle" aria-expanded="false" aria-controls="tape">History</button>
+      </header>
+      <div class="calculator" role="application" aria-label="Calculator">
+        <div class="display" aria-live="polite" aria-atomic="true">
+          <div class="history" id="history"></div>
+          <div class="current" id="display">0</div>
+        </div>
+        <div class="keys" id="keys">
+          <button data-action="mc" aria-label="Memory clear">MC</button>
+          <button data-action="mr" aria-label="Memory recall">MR</button>
+          <button data-action="mplus" aria-label="Memory add">M+</button>
+          <button data-action="mminus" aria-label="Memory subtract">M-</button>
+
+          <button data-action="clear" class="soft" aria-label="All clear">AC</button>
+          <button data-action="ce" class="soft" aria-label="Clear entry">CE</button>
+          <button data-action="sqrt" class="soft" aria-label="Square root">√</button>
+          <button data-action="square" class="soft" aria-label="Square">x²</button>
+
+          <button data-action="digit" data-digit="7">7</button>
+          <button data-action="digit" data-digit="8">8</button>
+          <button data-action="digit" data-digit="9">9</button>
+          <button data-action="operator" data-operator="/" class="op" aria-label="Divide">÷</button>
+
+          <button data-action="digit" data-digit="4">4</button>
+          <button data-action="digit" data-digit="5">5</button>
+          <button data-action="digit" data-digit="6">6</button>
+          <button data-action="operator" data-operator="*" class="op" aria-label="Multiply">×</button>
+
+          <button data-action="digit" data-digit="1">1</button>
+          <button data-action="digit" data-digit="2">2</button>
+          <button data-action="digit" data-digit="3">3</button>
+          <button data-action="operator" data-operator="-" class="op" aria-label="Subtract">−</button>
+
+          <button data-action="digit" data-digit="0" class="zero">0</button>
+          <button data-action="dot" aria-label="Decimal point">.</button>
+          <button data-action="percent" aria-label="Percent">%</button>
+          <button data-action="operator" data-operator="+" class="op" aria-label="Add">+</button>
+
+          <button data-action="equals" class="equals" aria-label="Equals">=</button>
+        </div>
+      </div>
+      <aside class="tape" id="tape" aria-label="History tape" hidden>
+        <ul id="tapeList"></ul>
+        <button class="tape-clear" id="tapeClear">Clear history</button>
+      </aside>
+      <footer class="footer">
+        <span>Keyboard: 0-9 . + - * / Enter = Backspace Esc %</span>
+      </footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  </body>
+</html>
+
+
